@@ -5,7 +5,7 @@ let server = require('http').Server(application);
 let GameServiceFactory = require('./node_src/GameServiceFactory.js');
 let GameServiceRepository = require('./node_src/GameServiceRepository.js');
 let UnitTest = require('./node_src/UnitTest.js');
-
+console.log('server started')
 //Perform unit tests on some required logic
 let unitTest = new UnitTest();
 
@@ -14,8 +14,9 @@ application.get('/', function(request, response){
 });
 application.use('/client', express.static(__dirname + '/client'));
 
-//server.listen(3000);
-server.listen(80);
+server.listen(3000);
+// server.listen(80);
+// server.listen(5173);
 
 console.log('============= Server started ===============');
 
